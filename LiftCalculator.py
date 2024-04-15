@@ -92,7 +92,7 @@ for foil in range(1,len(data)):
                 Drag = TakeoffDrag(AirDensity, CD, WingArea, Vlo)
                 Rav = TakeoffResistiveForce(Drag, coefRollFrict, weight, Lift)
                 ThrustNeeded = ThrustForDistance(weight, g, AirDensity, WingArea, CLMax, 100, Rav)
-                if ThrustNeeded < 12.0:
+                if ThrustNeeded < 11.0:
                     # Write data to the CSV file
                     data_to_write = [name, CL, CD, CLMax, Vlo, Lift, Drag, Rav, WingArea, ThrustNeeded]
                     with open(file_path, mode="a", newline="") as file:
