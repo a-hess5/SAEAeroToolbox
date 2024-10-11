@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-file_path = "foil_data_new1.csv"
+file_path = "foil_data_new_pg1-80.csv"
 with open(file_path, mode="w", newline="") as file:
     writer = csv.writer(file)
 
