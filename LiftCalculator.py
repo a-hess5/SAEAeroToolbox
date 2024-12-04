@@ -1,3 +1,7 @@
+# Takes in an airfoil data sheet made by AirfoilScrape.py
+# Calculates the needed takeoff velocity and wing area at a provided takeoff distance and weight
+# Outputs all possible combos within range
+
 import csv
 import math
 

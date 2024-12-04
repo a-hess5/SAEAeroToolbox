@@ -36,8 +36,8 @@ def calculate_drag(rho, Cd, wing_area, velocity):
 
 
 # Main function to model takeoff
-def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_diameter, prop_pitch, runway_length,
-                       step_size, chord_length, kinematic_viscosity):
+def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, runway_length,
+                       step_size, chord_length, kinematic_viscosity, thrust_curve):
 
     # Other calculations and definitions
     reynoldsOptions = [50000, 100000, 200000, 500000] # Options for reynold's number (based on airfoiltools data)
@@ -51,7 +51,7 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_di
     lift = 0.0
     drag = 0.0
     rolling_resistance = 0.0
-    thrust = 7.952 #Thrust in lbs
+    thrust = 0 #Thrust in lbs
     net_force = thrust - drag - rolling_resistance
 
     takeoffVeloFactor = 1.2 # Defines what safety factor the velocity must be at to trigger takeoff
@@ -73,6 +73,7 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_di
         velocity += acceleration * time_step
         position += velocity * time_step
         reynolds = (velocity * chord_length) / kinematic_viscosity  # Dynamic Reynolds Number (changes with velocity)
+        thrust = velocity*pow(thrust_curve[0],2)+velocity*thrust_curve[1]+thrust_curve[2]
 
         if reynoldsOptions[reynoldsIndex] < 500000 and reynolds > reynoldsOptions[
             reynoldsIndex]:  # Checks if the approximate reynold's number being used for Cl and Cd needs changed
@@ -95,10 +96,10 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_di
 
 
     # Plot the results
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(12, 4))
 
     # Plot thrust vs position
-    plt.subplot(2, 2, 1)
+    plt.subplot(1, 3, 1)
     plt.plot(positionList, thrustList, label='Thrust')
     plt.xlabel('Position (ft)')
     plt.ylabel('Thrust (lbf)')
@@ -106,7 +107,7 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_di
     plt.grid(True)
 
     # Plot Lift vs position
-    plt.subplot(2, 2, 2)
+    plt.subplot(1, 3, 2)
     plt.plot(positionList, liftList, label='Lift')
     plt.xlabel('Position (ft)')
     plt.ylabel('Lift (lbf)')
@@ -114,20 +115,20 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_di
     plt.grid(True)
 
     # Plot velocity vs position
-    plt.subplot(2, 2, 3)
+    plt.subplot(1, 3, 3)
     plt.plot(positionList, velocityList, label='Velocity', color='orange')
     plt.xlabel('Position (ft)')
     plt.ylabel('Velocity (ft/s)')
     plt.title('Velocity vs Position')
     plt.grid(True)
 
-    # Plot Reynolds Number vs position
-    plt.subplot(2, 2, 4)
-    plt.plot(positionList, reynoldsList, label='Reynold\'s Number', color='orange')
-    plt.xlabel('Position (ft)')
-    plt.ylabel('Reynold\'s Number')
-    plt.title('Reynold\'s Number vs Position')
-    plt.grid(True)
+    # # Plot Reynolds Number vs position
+    # plt.subplot(2, 2, 4)
+    # plt.plot(positionList, reynoldsList, label='Reynold\'s Number', color='orange')
+    # plt.xlabel('Position (ft)')
+    # plt.ylabel('Reynold\'s Number')
+    # plt.title('Reynold\'s Number vs Position')
+    # plt.grid(True)
 
     plt.tight_layout()
     plt.show()
@@ -138,16 +139,17 @@ wing_area = 31.467  # ft^2
 mass = 45/32.2  # slugs (5 lb, use lb/g to convert)
 rho = 0.0023769  # slugs/ft^3, air density at sea level
 Cl = 1.2045  # Coefficient of lift
-Cd = 0.01643  # Coefficient of drag
+Cd = 0.0872  # Coefficient of drag
 Cr = .02 # Coefficient of Rolling Resistance
 kv = 370  # Motor kv rating
 horsepower = 1.01  # Motor power in HP
 prop_diameter = 17/12.0  # Propeller diameter in feet
 prop_pitch = 7/12.0  # Propeller pitch in feet
-runway_length = 100  # Runway length in feet
+runway_length = 90  # Runway length in feet
 step_size = 0.001  # Step size for simulation (in s)
 chord_length = 29/12 # Chord Length in feet
 kinematic_viscosity = .00015723 # Kinematic Viscosity at Sea Level (ft2/s)
+thrust_curve =  [-2.41829211e-03, -1.48781621e-01,  1.25761368e+01]
 
 # Run the simulation
-takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, kv, horsepower, prop_diameter, prop_pitch, runway_length, step_size, chord_length, kinematic_viscosity)
+takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, runway_length, step_size, chord_length, kinematic_viscosity, thrust_curve)

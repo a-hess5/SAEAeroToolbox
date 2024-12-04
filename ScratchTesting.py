@@ -1,3 +1,5 @@
+#Testing Program to get takeoff modeling data right
+
 #Define target airplane Weight (in pounds)
 import math
 

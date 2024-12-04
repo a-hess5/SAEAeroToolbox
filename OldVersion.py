@@ -1,3 +1,6 @@
+# First version of the Airfoil Scraping Script.
+# This was replaced by AirfoilScrape.py
+
 from bs4 import BeautifulSoup
 import requests
 import csv
