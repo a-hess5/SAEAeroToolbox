@@ -1,3 +1,7 @@
+# Takes in an airfoil data sheet made by AirfoilScrape.py
+# Calculates the needed takeoff velocity and wing area at a provided takeoff distance and weight
+# Outputs all possible combos within range
+
 import csv
 import math
 
@@ -57,7 +61,7 @@ def ThrustForDistance(W, g, density, WingArea, CLMax, Distance, Rav):
 
 
 
-file_path = "foil_takeoff_calc.csv"
+file_path = "foil_takeoff_calc55lb80.csv"
 with open(file_path, mode="w", newline="") as file:
     writer = csv.writer(file)
     # Write header row (optional)
@@ -67,7 +71,7 @@ with open(file_path, mode="w", newline="") as file:
 
 
 #Define target airplane Weight (in pounds)
-weight = 55
+weight = 45
 #Define Air Density (slugs*ft^-3)
 AirDensity = 0.002378
 g = 32.17
@@ -80,7 +84,7 @@ for foil in range(1,len(data)):
     #CLMax is constant for an airfoil so it can be pulled before alphas are changed
     CLMax = float(data[foil][17])
     #Iterate through the alpha values and pull CL and CD for them
-    for alpha in range(2, 6, 3):
+    for alpha in range(2, 3, 3):
         name = data[foil][0].split(',')[1]+"-"+data[0][alpha].split('-')[1]
         CL = float(data[foil][alpha])
         CD = float(data[foil][alpha+1])
@@ -91,8 +95,8 @@ for foil in range(1,len(data)):
                 Lift = TakeoffLift(AirDensity, CL, WingArea, Vlo)
                 Drag = TakeoffDrag(AirDensity, CD, WingArea, Vlo)
                 Rav = TakeoffResistiveForce(Drag, coefRollFrict, weight, Lift)
-                ThrustNeeded = ThrustForDistance(weight, g, AirDensity, WingArea, CLMax, 100, Rav)
-                if ThrustNeeded < 11.0:
+                ThrustNeeded = ThrustForDistance(weight, g, AirDensity, WingArea, CLMax, 80, Rav)
+                if ThrustNeeded < 20.0:
                     # Write data to the CSV file
                     data_to_write = [name, CL, CD, CLMax, Vlo, Lift, Drag, Rav, WingArea, ThrustNeeded]
                     with open(file_path, mode="a", newline="") as file:

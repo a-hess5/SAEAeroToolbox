@@ -1,0 +1,321 @@
+ID,Parameter,Value
+1501,Speed (rpm),500
+1501,Rated Torque (lb-in),25
+1501,Rated Voltage (VDC),90
+1501,Current (Amps),2.2
+1501,Peak Torque (lb-in),72
+1501,Power (HP),1/4
+1501,Form Factor (FF),1.5
+1501,Gear Ratio,5
+1501,Radial Load (lbs),48
+1501,Length XH (inch),9.3
+1501,Weight (lbs),15.4
+1501,Product Type,42A5BEPM-FX1
+1501,Accessory Shaft,NO
+1501,HP Decimal,.25
+1501,Connection Diagram,07410101
+1501,Price,$669.35 USD
+1502,Speed (rpm),250
+1502,Rated Torque (lb-in),48
+1502,Rated Voltage (VDC),90
+1502,Current (Amps),2.2
+1502,Peak Torque (lb-in),195
+1502,Power (HP),1/4
+1502,Form Factor (FF),1.5
+1502,Gear Ratio,10
+1502,Radial Load (lbs),300
+1502,Length XH (inch),9.3
+1502,Weight (lbs),15.4
+1502,Product Type,42A5BEPM-FX2
+1502,Accessory Shaft,NO
+1502,HP Decimal,.25
+1502,Connection Diagram,07410101
+1502,Price,$682.37 USD
+1503,Speed (rpm),167
+1503,Rated Torque (lb-in),73
+1503,Rated Voltage (VDC),90
+1503,Current (Amps),2.2
+1503,Peak Torque (lb-in),290
+1503,Power (HP),1/4
+1503,Form Factor (FF),1.5
+1503,Gear Ratio,15
+1503,Radial Load (lbs),300
+1503,Length XH (inch),9.3
+1503,Weight (lbs),15.4
+1503,Product Type,42A5BEPM-FX2
+1503,Accessory Shaft,NO
+1503,HP Decimal,.25
+1503,Connection Diagram,07410101
+1503,Price,$682.37 USD
+1504,Speed (rpm),125
+1504,Rated Torque (lb-in),97
+1504,Rated Voltage (VDC),90
+1504,Current (Amps),2.2
+1504,Peak Torque (lb-in),280
+1504,Power (HP),1/4
+1504,Form Factor (FF),1.5
+1504,Gear Ratio,20
+1504,Radial Load (lbs),292
+1504,Length XH (inch),9.3
+1504,Weight (lbs),15.4
+1504,Product Type,42A5BEPM-FX3
+1504,Accessory Shaft,NO
+1504,HP Decimal,.25
+1504,Connection Diagram,07410101
+1504,Price,$695.39 USD
+1505,Speed (rpm),83
+1505,Rated Torque (lb-in),145
+1505,Rated Voltage (VDC),90
+1505,Current (Amps),2.2
+1505,Peak Torque (lb-in),400
+1505,Power (HP),1/4
+1505,Form Factor (FF),1.5
+1505,Gear Ratio,30
+1505,Radial Load (lbs),281
+1505,Length XH (inch),9.3
+1505,Weight (lbs),15.4
+1505,Product Type,42A5BEPM-FX3
+1505,Accessory Shaft,NO
+1505,HP Decimal,.25
+1505,Connection Diagram,07410101
+1505,Price,$695.39 USD
+1506,Speed (rpm),63
+1506,Rated Torque (lb-in),194
+1506,Rated Voltage (VDC),90
+1506,Current (Amps),2.2
+1506,Peak Torque (lb-in),335
+1506,Power (HP),1/4
+1506,Form Factor (FF),1.5
+1506,Gear Ratio,40
+1506,Radial Load (lbs),254
+1506,Length XH (inch),9.3
+1506,Weight (lbs),15.4
+1506,Product Type,42A5BEPM-FX3
+1506,Accessory Shaft,NO
+1506,HP Decimal,.25
+1506,Connection Diagram,07410101
+1506,Price,$695.39 USD
+1507,Speed (rpm),42
+1507,Rated Torque (lb-in),290
+1507,Rated Voltage (VDC),90
+1507,Current (Amps),2.2
+1507,Peak Torque (lb-in),470
+1507,Power (HP),1/4
+1507,Form Factor (FF),1.5
+1507,Gear Ratio,60
+1507,Radial Load (lbs),233
+1507,Length XH (inch),9.3
+1507,Weight (lbs),15.4
+1507,Product Type,42A5BEPM-FX3
+1507,Accessory Shaft,NO
+1507,HP Decimal,.25
+1507,Connection Diagram,07410101
+1507,Price,$695.39 USD
+1508,Speed (rpm),21
+1508,Rated Torque (lb-in),350
+1508,Rated Voltage (VDC),90
+1508,Current (Amps),2.2
+1508,Peak Torque (lb-in),500
+1508,Power (HP),1/4
+1508,Form Factor (FF),1.5
+1508,Gear Ratio,120
+1508,Radial Load (lbs),214
+1508,Length XH (inch),9.3
+1508,Weight (lbs),15.4
+1508,Product Type,42A5BEPM-FX4
+1508,Accessory Shaft,NO
+1508,HP Decimal,.25
+1508,Connection Diagram,07410101
+1508,Price,$721.44 USD
+1509,Speed (rpm),14
+1509,Rated Torque (lb-in),350
+1509,Rated Voltage (VDC),90
+1509,Current (Amps),2.2
+1509,Peak Torque (lb-in),500
+1509,Power (HP),1/4
+1509,Form Factor (FF),1.5
+1509,Gear Ratio,180
+1509,Radial Load (lbs),214
+1509,Length XH (inch),9.3
+1509,Weight (lbs),15.4
+1509,Product Type,42A5BEPM-FX4
+1509,Accessory Shaft,NO
+1509,HP Decimal,.25
+1509,Connection Diagram,07410101
+1509,Price,$721.44 USD
+1510,Speed (rpm),8.3
+1510,Rated Torque (lb-in),350
+1510,Rated Voltage (VDC),90
+1510,Current (Amps),2.2
+1510,Peak Torque (lb-in),500
+1510,Power (HP),1/4
+1510,Form Factor (FF),1.5
+1510,Gear Ratio,300
+1510,Radial Load (lbs),214
+1510,Length XH (inch),9.3
+1510,Weight (lbs),15.4
+1510,Product Type,42A5BEPM-FX4
+1510,Accessory Shaft,NO
+1510,HP Decimal,.25
+1510,Connection Diagram,07410101
+1510,Price,$721.44 USD
+5140,Speed (rpm),500
+5140,Rated Torque (lb-in),25
+5140,Rated Voltage (VDC),180
+5140,Current (Amps),1.2
+5140,Peak Torque (lb-in),72
+5140,Power (HP),1/4
+5140,Form Factor (FF),1.6
+5140,Gear Ratio,5
+5140,Radial Load (lbs),48
+5140,Length XH (inch),9.3
+5140,Weight (lbs),15.4
+5140,Product Type,42A5BEPM-FX1
+5140,Accessory Shaft,NO
+5140,HP Decimal,.25
+5140,Connection Diagram,07410101
+5140,Price,$669.35 USD
+5141,Speed (rpm),250
+5141,Rated Torque (lb-in),48
+5141,Rated Voltage (VDC),180
+5141,Current (Amps),1.2
+5141,Peak Torque (lb-in),195
+5141,Power (HP),1/4
+5141,Form Factor (FF),1.6
+5141,Gear Ratio,10
+5141,Radial Load (lbs),300
+5141,Length XH (inch),9.3
+5141,Weight (lbs),15.4
+5141,Product Type,42A5BEPM-FX2
+5141,Accessory Shaft,NO
+5141,HP Decimal,.25
+5141,Connection Diagram,07410101
+5141,Price,$682.37 USD
+5142,Speed (rpm),167
+5142,Rated Torque (lb-in),73
+5142,Rated Voltage (VDC),180
+5142,Current (Amps),1.2
+5142,Peak Torque (lb-in),290
+5142,Power (HP),1/4
+5142,Form Factor (FF),1.6
+5142,Gear Ratio,15
+5142,Radial Load (lbs),300
+5142,Length XH (inch),9.3
+5142,Weight (lbs),15.4
+5142,Product Type,42A5BEPM-FX2
+5142,Accessory Shaft,NO
+5142,HP Decimal,.25
+5142,Connection Diagram,07410101
+5142,Price,$682.37 USD
+5143,Speed (rpm),125
+5143,Rated Torque (lb-in),97
+5143,Rated Voltage (VDC),180
+5143,Current (Amps),1.2
+5143,Peak Torque (lb-in),280
+5143,Power (HP),1/4
+5143,Form Factor (FF),1.6
+5143,Gear Ratio,20
+5143,Radial Load (lbs),292
+5143,Length XH (inch),9.3
+5143,Weight (lbs),15.4
+5143,Product Type,42A5BEPM-FX3
+5143,Accessory Shaft,NO
+5143,HP Decimal,.25
+5143,Connection Diagram,07410101
+5143,Price,$695.39 USD
+5144,Speed (rpm),83
+5144,Rated Torque (lb-in),145
+5144,Rated Voltage (VDC),180
+5144,Current (Amps),1.2
+5144,Peak Torque (lb-in),400
+5144,Power (HP),1/4
+5144,Form Factor (FF),1.6
+5144,Gear Ratio,30
+5144,Radial Load (lbs),281
+5144,Length XH (inch),9.3
+5144,Weight (lbs),15.4
+5144,Product Type,42A5BEPM-FX3
+5144,Accessory Shaft,NO
+5144,HP Decimal,.25
+5144,Connection Diagram,07410101
+5144,Price,$695.39 USD
+5145,Speed (rpm),63
+5145,Rated Torque (lb-in),194
+5145,Rated Voltage (VDC),180
+5145,Current (Amps),1.2
+5145,Peak Torque (lb-in),335
+5145,Power (HP),1/4
+5145,Form Factor (FF),1.6
+5145,Gear Ratio,40
+5145,Radial Load (lbs),254
+5145,Length XH (inch),9.3
+5145,Weight (lbs),15.4
+5145,Product Type,42A5BEPM-FX3
+5145,Accessory Shaft,NO
+5145,HP Decimal,.25
+5145,Connection Diagram,07410101
+5145,Price,$695.39 USD
+5146,Speed (rpm),42
+5146,Rated Torque (lb-in),290
+5146,Rated Voltage (VDC),180
+5146,Current (Amps),1.2
+5146,Peak Torque (lb-in),470
+5146,Power (HP),1/4
+5146,Form Factor (FF),1.6
+5146,Gear Ratio,60
+5146,Radial Load (lbs),233
+5146,Length XH (inch),9.3
+5146,Weight (lbs),15.4
+5146,Product Type,42A5BEPM-FX3
+5146,Accessory Shaft,NO
+5146,HP Decimal,.25
+5146,Connection Diagram,07410101
+5146,Price,$695.39 USD
+5147,Speed (rpm),21
+5147,Rated Torque (lb-in),350
+5147,Rated Voltage (VDC),180
+5147,Current (Amps),1.2
+5147,Peak Torque (lb-in),500
+5147,Power (HP),1/4
+5147,Form Factor (FF),1.6
+5147,Gear Ratio,120
+5147,Radial Load (lbs),214
+5147,Length XH (inch),9.3
+5147,Weight (lbs),15.4
+5147,Product Type,42A5BEPM-FX4
+5147,Accessory Shaft,NO
+5147,HP Decimal,.25
+5147,Connection Diagram,07410101
+5147,Price,$721.44 USD
+5148,Speed (rpm),14
+5148,Rated Torque (lb-in),350
+5148,Rated Voltage (VDC),180
+5148,Current (Amps),1.2
+5148,Peak Torque (lb-in),500
+5148,Power (HP),1/4
+5148,Form Factor (FF),1.6
+5148,Gear Ratio,180
+5148,Radial Load (lbs),214
+5148,Length XH (inch),9.3
+5148,Weight (lbs),15.4
+5148,Product Type,42A5BEPM-FX4
+5148,Accessory Shaft,NO
+5148,HP Decimal,.25
+5148,Connection Diagram,07410101
+5148,Price,$721.44 USD
+5149,Speed (rpm),8.3
+5149,Rated Torque (lb-in),350
+5149,Rated Voltage (VDC),180
+5149,Current (Amps),2.2
+5149,Peak Torque (lb-in),500
+5149,Power (HP),1/4
+5149,Form Factor (FF),1.6
+5149,Gear Ratio,300
+5149,Radial Load (lbs),214
+5149,Length XH (inch),9.3
+5149,Weight (lbs),15.4
+5149,Product Type,42A5BEPM-FX4
+5149,Accessory Shaft,NO
+5149,HP Decimal,.25
+5149,Connection Diagram,07410101
+5149,Price,$721.44 USD
