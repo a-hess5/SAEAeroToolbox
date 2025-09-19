@@ -7,7 +7,7 @@ import math
 
 
 #Define file path of CSV with airfoil data
-csv_file_path = 'foil_data_new.csv'
+csv_file_path = '../AirfoilScraperAndData/foil_data_symmetric.csv'
 
 #Open CSV File with Scraped Airfoil data. Save data to list named Data
 try:
@@ -61,7 +61,7 @@ def ThrustForDistance(W, g, density, WingArea, CLMax, Distance, Rav):
 
 
 
-file_path = "foil_takeoff_calc55lb80.csv"
+file_path = "foil_takeoff_calc3_5lb.csv"
 with open(file_path, mode="w", newline="") as file:
     writer = csv.writer(file)
     # Write header row (optional)
@@ -71,12 +71,15 @@ with open(file_path, mode="w", newline="") as file:
 
 
 #Define target airplane Weight (in pounds)
-weight = 45
+weight = 3.5
 #Define Air Density (slugs*ft^-3)
 AirDensity = 0.002378
 g = 32.17
 coefRollFrict = 0.02
-
+wing_area_min = .75 #ft^2
+wing_are_max = 6 #ft^2
+wing_area_step = .05
+max_thrust = 2.5
 
 
 #Pulls out an airfoil from the sheet data
@@ -89,14 +92,14 @@ for foil in range(1,len(data)):
         CL = float(data[foil][alpha])
         CD = float(data[foil][alpha+1])
         if CL>0 and CD>0:
-            for WingArea in range(150, 435, 5):
-                WingArea = WingArea / 10.0
+            for WingArea in range(wing_area_min*100, wing_are_max*100, wing_area_step*100):
+                WingArea = WingArea / 100.0
                 Vlo = NeededTakeoffVelocity(weight, AirDensity, CLMax, WingArea)
                 Lift = TakeoffLift(AirDensity, CL, WingArea, Vlo)
                 Drag = TakeoffDrag(AirDensity, CD, WingArea, Vlo)
                 Rav = TakeoffResistiveForce(Drag, coefRollFrict, weight, Lift)
-                ThrustNeeded = ThrustForDistance(weight, g, AirDensity, WingArea, CLMax, 80, Rav)
-                if ThrustNeeded < 20.0:
+                ThrustNeeded = ThrustForDistance(weight, g, AirDensity, WingArea, CLMax, 10, Rav)
+                if ThrustNeeded < max_thrust:
                     # Write data to the CSV file
                     data_to_write = [name, CL, CD, CLMax, Vlo, Lift, Drag, Rav, WingArea, ThrustNeeded]
                     with open(file_path, mode="a", newline="") as file:

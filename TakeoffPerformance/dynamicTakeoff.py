@@ -135,8 +135,8 @@ def takeoff_simulation(wing_area, mass, rho, Cl, Cd, Cr, runway_length,
 
 
 # Example usage
-wing_area = 31.467  # ft^2
-mass = 45/32.2  # slugs (5 lb, use lb/g to convert)
+wing_area = 4  # ft^2
+mass = 3.5/32.2  # slugs (5 lb, use lb/g to convert)
 rho = 0.0023769  # slugs/ft^3, air density at sea level
 Cl = 1.2045  # Coefficient of lift
 Cd = 0.0872  # Coefficient of drag

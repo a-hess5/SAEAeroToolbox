@@ -6,7 +6,6 @@ from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 import matplotlib.pyplot as plt
 
-#AHHHHH
 
 # Load Data
 def load_data(file_path):

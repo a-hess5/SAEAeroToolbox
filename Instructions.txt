@@ -1,0 +1,17 @@
+I want to scrape airfoils from the airfoil tools website to use for my project!
+    - Please don't. They don't like it
+    - But if you have to, use the AirfoilScrapeMultipleReynoldsAoA
+        - This runs and scrapes from Airfoiltools.com
+    - My data is already in foil_data_new_pg... across two files. Use these
+
+I want to find the thrust curve equation for my propeller
+    - Download the .dat file you want to use and put it in the prop test sim folder
+    - Use the propThrustSim and enter the file of your .dat file
+    - It will generate an equation for you
+    - Copy the equation to dynamic takeoff and climb (if necessary)
+
+I want to simulate different airfoils to see how well they work for my design
+    - Copy the thrust curve and paste it in
+    - Change the variables for your airplane so far
+    - Change the title for what you want
+    - Run it to output a sheet

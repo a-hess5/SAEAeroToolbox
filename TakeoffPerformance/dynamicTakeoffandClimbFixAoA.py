@@ -64,9 +64,9 @@ def takeoff_and_climb_simulation(wing_area, mass, rho, runway_length, simulation
         velocity += acceleration * step_size
         position += velocity * step_size
 
-        if lift >= weight:
+        if lift >= weight or position >= runway_length*.9:
             altitude += velocity * math.sin(math.radians(alpha)) * step_size
-            alpha = min(alpha + 0.1, 10)  # Slowly increase AoA during climb
+            alpha = min(alpha + 0.1, 5)  # Slowly increase AoA during climb
 
         position_list.append(position)
         velocity_list.append(velocity)
@@ -125,21 +125,21 @@ def takeoff_and_climb_simulation(wing_area, mass, rho, runway_length, simulation
 
 
 # Specify the airfoil you want to use
-selected_airfoil = "goe244-il"  # Change this to the airfoil of interest
+selected_airfoil = "Airfoil,clarkysm-il"  # Change this to the airfoil of interest
 
 # Load data only for that airfoil
-airfoil_data = load_airfoil_data('foil_data_new_pg1-80.csv', selected_airfoil)
+airfoil_data = load_airfoil_data('../AirfoilScraperAndData/foil_data_new_pg1-80.csv', selected_airfoil)
 
 # Example parameters
-wing_area = 31.467
-mass = 45 / 32.2
+wing_area = 5
+mass = 3.5 / 32.2
 rho = 0.0023769
-runway_length = 90
-simulation_length = 300
+runway_length = 5
+simulation_length = 100 # Distance in feet
 step_size = 0.001
-chord_length = 29 / 12
+chord_length = 12 / 12
 kinematic_viscosity = 0.00015723
-thrust_curve = [-3.47418e-03, -7.88148e-02, 1.327000e+01]
+thrust_curve = [-1.34264307e-04, -2.03613928e-03,  2.23465198e+00]
 
 # Run simulation
 takeoff_and_climb_simulation(wing_area, mass, rho, runway_length, simulation_length, step_size, chord_length, kinematic_viscosity,

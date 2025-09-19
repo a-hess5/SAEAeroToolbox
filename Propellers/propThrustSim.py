@@ -79,11 +79,11 @@ def fit_thrust_curve(rpm_data, target_rpm):
     return popt, None
 
 # Load and parse the .dat file
-file_path = 'PER3_27x13E.dat'  # Replace with your actual file path
+file_path = 'PER3_5x45E.dat'  # Replace with your actual file path
 rpm_data = parse_dat_file(file_path)
 
 # Interpolate thrust at a specific RPM and velocity
-target_rpm = 3000# Target RPM for interpolation, not directly in available RPM data
+target_rpm = 24000# Target RPM for interpolation, not directly in available RPM data
 target_velocity = 0  # Target velocity for interpolation in mph
 thrust, error = interpolate_thrust(rpm_data, target_rpm, target_velocity)
 if error:
@@ -102,7 +102,7 @@ else:
     a, b, c = fit_params
 
     # Generate x values for plotting
-    x = np.linspace(0, 30, 400)  # Velocity range for plotting (0 to 30 mph)
+    x = np.linspace(0, 80, 400)  # Velocity range for plotting (0 to 30 mph)
     # Calculate thrust values based on the fitted quadratic function
     y = a * x ** 2 + b * x + c
 
